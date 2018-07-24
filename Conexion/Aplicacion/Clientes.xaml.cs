@@ -39,6 +39,7 @@ namespace Aplicacion
             txtTelefono.Clear();
             txtCorreo.Clear();
             cmbCargaTipoCliente();
+            btnGuardar.Visibility = Visibility.Visible;
             btnActualizar.Visibility = Visibility.Collapsed;
             btnEliminar.Visibility = Visibility.Collapsed;
         }
@@ -106,9 +107,12 @@ namespace Aplicacion
                 btnEliminar.Visibility = Visibility.Visible;
                 btnGuardar.Visibility = Visibility.Collapsed;
             }
-            btnActualizar.Visibility = Visibility.Collapsed;
-            btnEliminar.Visibility = Visibility.Collapsed;
-            btnGuardar.Visibility = Visibility.Visible;
+            else
+            {
+                btnActualizar.Visibility = Visibility.Collapsed;
+                btnEliminar.Visibility = Visibility.Collapsed;
+                btnGuardar.Visibility = Visibility.Visible;
+            }
         }
 
         private void txtDv_TextChanged(object sender, TextChangedEventArgs e)
