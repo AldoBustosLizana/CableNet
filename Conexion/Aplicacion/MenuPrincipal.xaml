@@ -77,6 +77,14 @@
                             </Grid>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem Cursor="Hand" x:Name="Servicio" Height="60" Background="#FF313EC7">
+                        <StackPanel Orientation="Horizontal">
+                            <Grid Width="206" >
+                                <Image Height="47" Width="46" HorizontalAlignment="Left" Source="Imagenes/clientesBlanco.png" Margin="8,0,0,0" Cursor="Hand"/>
+                                <TextBlock Text="Servicios" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="16" FontFamily="Microsoft YaHei UI" Foreground="White" Margin="59,0,10,14" Width="137" TextAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </ListViewItem>
                 </ListView>
             </StackPanel>
         </Grid>

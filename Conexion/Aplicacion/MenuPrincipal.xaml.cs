@@ -66,12 +66,12 @@ namespace Aplicacion
                     GridMain.Children.Clear();
                     GridMain.Children.Add(usc);
                     break;
-                    /*
-                case "Clientes":
-                    usc = new MenuCliente();
+                case "Servicio":
+                    usc = new Servicios();
                     GridMain.Children.Clear();
                     GridMain.Children.Add(usc);
                     break;
+                    /*
                 case "Pagos":
                     usc = new MenuDepositos();
                     GridMain.Children.Clear();

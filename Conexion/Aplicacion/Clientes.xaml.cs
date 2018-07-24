@@ -125,7 +125,24 @@ namespace Aplicacion
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            guardarCliente();
+            if (comprobarVacios() == true)
+            {
+                MessageBox.Show("Se deben llenar todos los campos para guardar el Cliente");
+            }
+            else
+            {
+                guardarCliente();
+            }
+        }
+
+        private bool comprobarVacios()
+        {
+            bool vacios = false;
+            if (txtRut.Text == "" || txtDv.Text == "" || txtNombres.Text == "" || txtTelefono.Text == "" || txtApPaterno.Text == "" || txtCorreo.Text == "")
+            {
+                vacios = true;
+            }
+            return vacios;
         }
 
         private void txtRut_TextChanged(object sender, TextChangedEventArgs e)

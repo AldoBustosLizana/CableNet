@@ -45,8 +45,10 @@
     <Compile Include="Enum.cs" />
     <Compile Include="Mantenedor.cs" />
     <Compile Include="MantenedorCliente.cs" />
+    <Compile Include="MantenedorServicio.cs" />
     <Compile Include="MantenedorUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

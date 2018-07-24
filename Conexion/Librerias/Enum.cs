@@ -8,6 +8,59 @@ using System.Data.SqlClient;
 
 namespace Librerias
 {
+    public class cargaTipoServicio
+    {
+        private int _tipoServicio;
+        private string _descripcion;
+
+        public int TipoServicio
+        {
+            get
+            {
+                return _tipoServicio;
+            }
+
+            set
+            {
+                _tipoServicio = value;
+            }
+        }
+
+        public string Descripcion
+        {
+            get
+            {
+                return _descripcion;
+            }
+
+            set
+            {
+                _descripcion = value;
+            }
+        }
+
+        //Método para cargar TipoServicios
+        public static List<cargaTipoServicio> cargaTiposServicios()
+        {
+            List<cargaTipoServicio> cargaTiposServicios = new List<cargaTipoServicio>();
+            using (SqlConnection conn = Conexion.Conectar())
+            {
+                SqlCommand comando = new SqlCommand(string.Format("SELECT * FROM TIPO_SERVICIO"), conn);
+                SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cargaTipoServicio carga = new cargaTipoServicio();
+                    carga.TipoServicio = reader.GetInt32(0);
+                    carga.Descripcion = reader.GetString(1);
+                    cargaTiposServicios.Add(carga);
+                }
+                conn.Close();
+                return cargaTiposServicios;
+            }
+        }
+
+    }
     public class cargaTipoCliente
     {
         private int _tipoCliente;
